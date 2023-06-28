@@ -8,6 +8,7 @@ import Signup from "./Components/Admin/Signup";
 import Softwares from "./Components/Software Coupons/Softwares"
 import Internships from "./Components/Blogs/internships"
 import Home from "./Home";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <div >
@@ -20,7 +21,7 @@ function App() {
     <Route path="/blogs" element={<Internships />} />
 
   </Routes>
-
+<Footer/>
     </div>
   );
 }
