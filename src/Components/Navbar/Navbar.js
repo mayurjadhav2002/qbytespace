@@ -1,10 +1,13 @@
 import React from 'react'
-
+import "./Navbar.css"
+import { Route, Routes, Link } from "react-router-dom"
+import Home from '../../Home';
+import Login from '../Admin/Login';
 function Navbar() {
   return (
-    <div>
-    <header>
-    <div className="mx-auto flex shadow-sm items-center justify-between p-4">
+    <div className='shadow-sm'>
+   
+    <div className="mx-auto z-50 bg-white flex shadow-sm items-center justify-between p-4">
       <div className="flex items-center space-x-2">
         <button    type="button"
         className=" flex appearance-none p-1 text-gray-500 md:hidden justify-center items-center gap-2 rounded-md border border-transparent font-semibold "
@@ -45,57 +48,60 @@ function Navbar() {
             />
           </svg>
         </button>
-        <a href="#">
+        <Link to="/" >
         <span className='font-semibold text-justify bold text-2xl'>      QbyteSpace
 
         </span>
-        </a>
+        </Link>
       </div>
       <nav className="hidden items-center space-x-2 text-sm font-medium text-gray-800 md:flex">
-        <a
-          href="#"
+        <Link to="/software-discounts"
           className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
         >
           Software Coupons
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link to="/blogs"
           className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
         >
-          Internships
-        </a>
-        <a
-          href="#"
+          Internships + Courses
+        </Link>
+        <Link to="/software-discounts"
           className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
         >
-          Learning
-        </a>
-        <a
-          href="#"
-          className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-        >
-          MOOC
-        </a>
-        <a
-          href="#"
-          className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-        >
-          Blog
-        </a>
+          Careers
+        </Link>
+        <Link to="/ai-tools"
+        className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
+      >
+        AI tools
+      </Link>
+   
+        <div class="dropdown">
+        <Link
+        className="rounded dropbtn bg-white px-3 py-2 transition hover:bg-gray-100 "
+      >
+      More \/
+      </Link>
+        <div class="dropdown-content rounded-lg shadow-lg mt-1">
+       <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mt-1'>Udemy Coupons</Link>
+       <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1'>Book Finder</Link>
+
+       <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mb-1'>udemy Coupons</Link>
+
+        </div>
+      </div>
       </nav>
       <nav className="flex items-center space-x-1 text-sm font-medium text-gray-800">
-        <a
-          href="#"
-          className="hidden rounded bg-white px-3 py-2 transition hover:bg-gray-100 sm:inline"
+        <Link to="/login"
+          className="hidden rounded bg-white px-3 py-2 transition hover:bg-purple-100 sm:inline"
         >
           Login
-        </a>
-        <a
-          href="#"
-          className="rounded bg-rose-600 px-3 py-2 text-white transition hover:bg-rose-700"
+        </Link>
+        <Link to="/signup"
+          className="rounded q-btn px-3 py-2 text-white transition hover:bg-rose-700"
         >
           Sign Up
-        </a>
+        </Link>
       </nav>
       <div
     id="hs-overlay-example"
@@ -103,9 +109,7 @@ function Navbar() {
     tabIndex={-1}
   >
     <div className="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
-      <h3 className="font-bold text-gray-800 dark:text-white">
-        Offcanvas title
-      </h3>
+    
       <button
         type="button"
         className="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white text-sm dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
@@ -128,16 +132,159 @@ function Navbar() {
       </button>
     </div>
     <div className="p-4">
-      <p className="text-gray-800 dark:text-gray-400">
-        Some text as placeholder. In real life you can have the elements you
-        have chosen. Like, text, images, lists, etc.
-      </p>
+    <div className="py-4 overflow-y-auto">
+    <ul className="space-y-2 font-medium">
+      <li>
+        <a
+          href="#"
+          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            aria-hidden="true"
+            className="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+          </svg>
+          <span className="ml-3">Software Coupons</span>
+        </a>
+      </li>
+     
+      <li>
+        <a
+          href="#"
+          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            aria-hidden="true"
+            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+          <span className="flex-1 ml-3 whitespace-nowrap">Interships + Courses</span>
+          <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
+            NEw
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            aria-hidden="true"
+            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z" />
+            <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+          </svg>
+          <span className="flex-1 ml-3 whitespace-nowrap">Career Blog</span>
+        
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            aria-hidden="true"
+            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span className="flex-1 ml-3 whitespace-nowrap">AI tools</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            aria-hidden="true"
+            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span className="flex-1 ml-3 whitespace-nowrap">More</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            aria-hidden="true"
+            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            aria-hidden="true"
+            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+        </a>
+      </li>
+    </ul>
+  </div>
     </div>
   </div>
     </div>
-  </header>
-  
+
+
     </div>
+    
   )
 }
 
