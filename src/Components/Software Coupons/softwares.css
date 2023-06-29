@@ -1,0 +1,9 @@
+.card-software{
+transition: transform .4s;
+
+}
+
+.card-software:hover{
+    transform: scale(1.05);
+    background-color: rgb(252, 255, 255);
+}
