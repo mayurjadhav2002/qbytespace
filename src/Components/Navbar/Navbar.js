@@ -1,107 +1,107 @@
 import React from 'react'
 import "./Navbar.css"
-import {Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
     <div className='shadow-sm top-0 sm:relative md:fixed md:sticky'>
-   
-    <div className="mx-auto z-50 bg-white flex shadow-sm items-center justify-between p-4">
-      <div className="flex items-center space-x-2">
-        <button type="button"
-        className=" flex appearance-none p-1 text-gray-500 md:hidden justify-center items-center gap-2 rounded-md border border-transparent font-semibold "
-        data-hs-overlay="#hs-overlay-example">
-          <svg className="h-6 w-6" fill="currentcolor" viewBox="0 0 256 256">
-            <line
-              x1={40}
-              y1={128}
-              x2={216}
-              y2={128}
-              fill="none"
-              stroke="currentcolor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={24}
-            />
-            <line
-              x1={40}
-              y1={64}
-              x2={216}
-              y2={64}
-              fill="none"
-              stroke="currentcolor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={24}
-            />
-            <line
-              x1={40}
-              y1={192}
-              x2={216}
-              y2={192}
-              fill="none"
-              stroke="currentcolor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={24}
-            />
-          </svg>
-        </button>
-        <Link to="/" >
-        <span className='font-semibold text-justify bold text-2xl'>      QbyteSpace
 
-        </span>
-        </Link>
-      </div>
-      <nav className="hidden items-center space-x-2 text-sm font-medium text-gray-800 md:flex">
-        <Link to="/software-discounts"
-          className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-        >
-          Software Coupons
-        </Link>
-        <Link to="/blogs"
-          className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-        >
-          Internships + Courses
-        </Link>
-        <Link to="/software-discounts"
-          className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-        >
-          Careers
-        </Link>
-        <Link to="/ai-tools"
-        className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-      >
-        AI tools
-      </Link>
-   
-        <div class="dropdown">
-        <Link
-        className="rounded dropbtn bg-white px-3 py-2 transition hover:bg-gray-100 "
-      >
-      More \/
-      </Link>
-        <div class="dropdown-content rounded-lg shadow-lg mt-1">
-       <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mt-1'>Udemy Coupons</Link>
-       <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1'>Book Finder</Link>
+      <div className="mx-auto z-50 bg-white flex shadow-sm items-center justify-between p-4">
+        <div className="flex items-center space-x-2">
+          <button type="button"
+            className=" flex appearance-none p-1 text-gray-500 md:hidden justify-center items-center gap-2 rounded-md border border-transparent font-semibold "
+            data-hs-overlay="#hs-overlay-example">
+            <svg className="h-6 w-6" fill="currentcolor" viewBox="0 0 256 256">
+              <line
+                x1={40}
+                y1={128}
+                x2={216}
+                y2={128}
+                fill="none"
+                stroke="currentcolor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={24}
+              />
+              <line
+                x1={40}
+                y1={64}
+                x2={216}
+                y2={64}
+                fill="none"
+                stroke="currentcolor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={24}
+              />
+              <line
+                x1={40}
+                y1={192}
+                x2={216}
+                y2={192}
+                fill="none"
+                stroke="currentcolor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={24}
+              />
+            </svg>
+          </button>
+          <Link to="/" >
+            <span className='font-semibold text-justify bold text-2xl'>      QbyteSpace
 
-       <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mb-1'>Write an Article</Link>
-
+            </span>
+          </Link>
         </div>
-      </div>
-      </nav>
-      <nav className="flex items-center space-x-1 text-sm font-medium text-gray-800">
-        <Link to="/login"
-          className="hidden rounded bg-white px-3 py-2 transition hover:bg-purple-100 sm:inline"
-        >
-          Login
-        </Link>
-        <Link to="/signup"
-          className="rounded q-btn px-3 py-2 text-white transition hover:bg-rose-700"
-        >
-          Sign Up
-        </Link>
-        {/*<div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+        <nav className="hidden items-center space-x-2 text-sm font-medium text-gray-800 md:flex">
+          <Link to="/software-discounts"
+            className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
+          >
+            Software Coupons
+          </Link>
+          <Link to="/blogs"
+            className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
+          >
+            Internships + Courses
+          </Link>
+          <Link to="/software-discounts"
+            className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
+          >
+            Careers
+          </Link>
+          <Link to="/ai-tools"
+            className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
+          >
+            AI tools
+          </Link>
+
+          <div class="dropdown">
+            <Link
+              className="rounded dropbtn bg-white px-3 py-2 transition hover:bg-gray-100 "
+            >
+              More \/
+            </Link>
+            <div class="dropdown-content rounded-lg shadow-lg mt-1">
+              <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mt-1'>Udemy Coupons</Link>
+              <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1'>Book Finder</Link>
+
+              <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mb-1'>Write an Article</Link>
+
+            </div>
+          </div>
+        </nav>
+        <nav className="flex items-center space-x-1 text-sm font-medium text-gray-800">
+          <Link to="/login"
+            className="hidden rounded bg-white px-3 py-2 transition hover:bg-purple-100 sm:inline"
+          >
+            Login
+          </Link>
+          <Link to="/signup"
+            className="rounded q-btn px-3 py-2 text-white transition hover:bg-rose-700"
+          >
+            Sign Up
+          </Link>
+          {/*<div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
         <a
           href="#"
           className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
@@ -189,255 +189,239 @@ function Navbar() {
           <span className="sr-only">Dribbble account</span>
         </a>
       </div> */}
-      </nav>
-      <div
-    id="hs-overlay-example"
-    className="hs-overlay  hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 left-0 transition-all duration-300 transform h-full max-w-xs 
+        </nav>
+        <div
+          id="hs-overlay-example"
+          className="hs-overlay  hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 left-0 transition-all duration-300 transform h-full max-w-xs 
      w-full z-[60] bg-white border-r dark:bg-gray-800 dark:border-gray-700 hidden"
-    tabIndex={-1}
-  >
-    <div className="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
-     
-      <button
-        type="button"
-        className="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white text-sm dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
-        data-hs-overlay="#hs-overlay-example"
-      >
-        <span className="sr-only">Close modal</span>
-        <svg
-          className="w-3.5 h-3.5"
-          width={8}
-          height={8}
-          viewBox="0 0 8 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          tabIndex={-1}
         >
-          <path
-            d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z"
-            fill="currentColor"
-          />
-        </svg>
-      </button>
-    </div>
-    <div className="p-4">
-    <div className="py-4 overflow-y-auto">
-    <ul className="space-y-2 font-medium" 
-    data-hs-overlay="#hs-overlay-example"    
->
-      <li> 
-        <Link to="software-discounts"
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"               aria-hidden="true"
-        className="w-6 h-6  transition duration-75 text-blue-400 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-        viewBox="0 0 16 16">
-  <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-  <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
-</svg>
-    
-          <span className="ml-3">Software Coupons</span>
-        </Link>
-      </li>
-     
-      <li>
-        <Link to="/blogs"
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
-        <svg xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"   fill="currentColor"
+          <div className="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
 
-        className="flex-shrink-0 w-6 h-6 text-lime-600 dark:text-green-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                 viewBox="0 0 16 16">
-  <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-  <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
-</svg>
-       
-          <span className="flex-1 ml-3 whitespace-nowrap">Internships + Courses</span>
-          <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full
+            <button
+              type="button"
+              className="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white text-sm dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
+              data-hs-overlay="#hs-overlay-example"
+            >
+              <span className="sr-only">Close modal</span>
+              <svg
+                className="w-3.5 h-3.5"
+                width={8}
+                height={8}
+                viewBox="0 0 8 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="p-4">
+            <div className="py-4 overflow-y-auto">
+              <ul className="space-y-2 font-medium"
+                data-hs-overlay="#hs-overlay-example"
+              >
+                <li>
+                  <Link to="software-discounts"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"
+                      className="w-6 h-6  transition duration-75 text-blue-400 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      viewBox="0 0 16 16">
+                      <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                      <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z" />
+                    </svg>
+
+                    <span className="ml-3">Software Coupons</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/blogs"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true" fill="currentColor"
+
+                      className="flex-shrink-0 w-6 h-6 text-lime-600 dark:text-green-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      viewBox="0 0 16 16">
+                      <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                      <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
+                    </svg>
+
+                    <span className="flex-1 ml-3 whitespace-nowrap">Internships + Courses</span>
+                    <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full
            dark:bg-gray-700 dark:text-gray-300">
-            New
-          </span>
-        </Link>
-      </li>
-      <li>
-        <a
-          href="#"
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
-     
-          <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true"
-          fill="currentColor"
+                      New
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
 
-          className="flex-shrink-0 w-6 h-6 text-purple-500 transition duration-75 dark:text-purple-400 group-hover:text-purple-900 dark:group-hover:text-white"
-           viewBox="0 0 16 16">
-  <path d="M3.5 12.5a.5.5 0 0 1-1 0V3.707L1.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.498.498 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 3.707V12.5zm3.5-9a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                      fill="currentColor"
+
+                      className="flex-shrink-0 w-6 h-6 text-purple-500 transition duration-75 dark:text-purple-400 group-hover:text-purple-900 dark:group-hover:text-white"
+                      viewBox="0 0 16 16">
+                      <path d="M3.5 12.5a.5.5 0 0 1-1 0V3.707L1.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.498.498 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 3.707V12.5zm3.5-9a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z" />
+                    </svg>
+                    <span className="flex-1 ml-3 whitespace-nowrap">Career Blog</span>
+
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      fill="currentColor"
+
+                      className="flex-shrink-0 w-6 h-6 text-zinc-500 transition duration-75 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
+                      viewBox="0 0 16 16">
+                      <path d="M5 7h3V4H5v3Z" />
+                      <path d="M1 2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 9H1V8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6H1V5H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 2H1Zm11 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm2 0a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7ZM3.5 10a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6Zm0 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6ZM4 4h-.5a.5.5 0 0 0 0 1H4v1h-.5a.5.5 0 0 0 0 1H4a1 1 0 0 0 1 1v.5a.5.5 0 0 0 1 0V8h1v.5a.5.5 0 0 0 1 0V8a1 1 0 0 0 1-1h.5a.5.5 0 0 0 0-1H9V5h.5a.5.5 0 0 0 0-1H9a1 1 0 0 0-1-1v-.5a.5.5 0 0 0-1 0V3H6v-.5a.5.5 0 0 0-1 0V3a1 1 0 0 0-1 1Zm7 7.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5Z" />
+                    </svg>
+                    <span className="flex-1 ml-3 whitespace-nowrap">AI tools</span>
+                  </a>
+                </li>
+                <li>
+                  <p
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+             
+                    <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true"
+                      className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      fill="currentColor"
+                      viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
 </svg>
-          <span className="flex-1 ml-3 whitespace-nowrap">Career Blog</span>
-        
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
-         
-          <svg xmlns="http://www.w3.org/2000/svg" 
-          aria-hidden="true"
-          fill="currentColor"
+                    <span className="flex-1 ml-3 whitespace-nowrap">More</span>
+                  </p>
 
-          className="flex-shrink-0 w-6 h-6 text-zinc-500 transition duration-75 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
-          viewBox="0 0 16 16">
-  <path d="M5 7h3V4H5v3Z"/>
-  <path d="M1 2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 9H1V8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6H1V5H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 2H1Zm11 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm2 0a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7ZM3.5 10a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6Zm0 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6ZM4 4h-.5a.5.5 0 0 0 0 1H4v1h-.5a.5.5 0 0 0 0 1H4a1 1 0 0 0 1 1v.5a.5.5 0 0 0 1 0V8h1v.5a.5.5 0 0 0 1 0V8a1 1 0 0 0 1-1h.5a.5.5 0 0 0 0-1H9V5h.5a.5.5 0 0 0 0-1H9a1 1 0 0 0-1-1v-.5a.5.5 0 0 0-1 0V3H6v-.5a.5.5 0 0 0-1 0V3a1 1 0 0 0-1 1Zm7 7.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5Z"/>
+                  {/* More End */}
+                  {/* Sublist of More */}
+                  <ul className='space-y-2 ml-6 font-medium'>
+                    <li>
+                      <Link to="/"
+                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+
+                        <svg
+                          aria-hidden="true"
+                          className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="flex-1 ml-3 whitespace-nowrap">Udemy Courses</span>
+                      </Link>
+                    </li>
+
+
+                    <li>
+                      <Link to="/"
+                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                   
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                          className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                          fill="currentColor"
+                          viewBox="0 0 16 16">
+  <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
 </svg>
-          <span className="flex-1 ml-3 whitespace-nowrap">AI tools</span>
-        </a>
-      </li>
-      <li>
-        <p
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
-          <svg
-            aria-hidden="true"
-            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-              clipRule="evenodd"
-            />
-          </svg>
-          <span className="flex-1 ml-3 whitespace-nowrap">More</span>
-        </p>
-
-{/* More End */}
-        {/* Sublist of More */}
-   <ul className='space-y-2 ml-6 font-medium'>
-   <li>
-   <Link to="/"
-   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
- >
-
-   <svg
-     aria-hidden="true"
-     className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-     fill="currentColor"
-     viewBox="0 0 20 20"
-     xmlns="http://www.w3.org/2000/svg"
-   >
-     <path
-       fillRule="evenodd"
-       d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-       clipRule="evenodd"
-     />
-   </svg>
-   <span className="flex-1 ml-3 whitespace-nowrap">Udemy Courses</span>
- </Link>
-   </li>
- 
-
-   <li>
-   <Link to="/"
-   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
- >
-   <svg
-     aria-hidden="true"
-     className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-     fill="currentColor"
-     viewBox="0 0 20 20"
-     xmlns="http://www.w3.org/2000/svg"
-   >
-     <path
-       fillRule="evenodd"
-       d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-       clipRule="evenodd"
-     />
-   </svg>0
-   <span className="flex-1 ml-3 whitespace-nowrap">Book Finder</span>
- </Link>
-   </li>
+                        <span className="flex-1 ml-3 whitespace-nowrap">Book Finder</span>
+                      </Link>
+                    </li>
 
 
-   <li>
-   <Link to="/"
-   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
- >
-   <svg
-     aria-hidden="true"
-     className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-     fill="currentColor"
-     viewBox="0 0 20 20"
-     xmlns="http://www.w3.org/2000/svg"
-   >
-     <path
-       fillRule="evenodd"
-       d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-       clipRule="evenodd"
-     />
-   </svg>
-   <span className="flex-1 ml-3 whitespace-nowrap">Write an Article</span>
- </Link>
-   </li>
-   </ul>
-   {/* More List end*/}
-      </li>
-   
+                    <li>
+                      <Link to="/"
+                        className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                       
 
-      <li>
-        <a
-          href="#"
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
-          <svg
-            aria-hidden="true"
-            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
-              clipRule="evenodd"
-            />
-          </svg>
-          <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
-          <svg
-            aria-hidden="true"
-            className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
-              clipRule="evenodd"
-            />
-          </svg>
-          <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-    </div>
-  </div>
-    </div>
+                        <svg xmlns="http://www.w3.org/2000/svg"  aria-hidden="true"
+                          className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                          fill="currentColor"
+                          viewBox="0 0 16 16">
+  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+</svg>
+                        <span className="flex-1 ml-3 whitespace-nowrap">Write an Article</span>
+                      </Link>
+                    </li>
+                  </ul>
+                  {/* More List end*/}
+                </li>
+
+
+                <li>
+                  <a
+                    href="#"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </div>
-    
+
   )
 }
 

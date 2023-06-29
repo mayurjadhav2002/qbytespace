@@ -6,12 +6,17 @@ function Softwares() {
     <div>
     <aside
       id="logo-sidebar" 
-      className="fixed top-0 right-0 -z-40 w-80 h-screen pt-20 transition-transform -translate-x-full bg-white border-l border-gray-200 
+      className="fixed cursor-pointer top-0 right-0 -z-40 w-80 h-screen pt-20 transition-transform -translate-x-full bg-white border-l border-gray-200 
       sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 hidden md:block sm:block lg:block" 
       aria-label="Sidebar"
     >
-      <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-        <ul className="space-y-2 font-medium">
+      <div className="h-full px-3 pb-4  bg-white dark:bg-gray-800">
+        <ul className="space-y-2 font-medium cursor-pointer">
+        <li className='cursor-pointer'>
+        <div className='w-full h-52 bg-slate-200'>
+        </div>
+        
+        </li>
           <li>
             <a
               href="#"
@@ -159,41 +164,20 @@ function Softwares() {
         <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-4">
    
 
-<Link to="/" className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<Link to="/view/1/adobe-coupon-code" className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   
         <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-        <div className='p-2  text-start -mt-20 rounded-lg bg-red-300 absolute '>
-        <p>$ 100</p>
-        <p>  $ <del>0</del></p>
-       </div>
-  <div className="p-5">
-  
+      
+        
+       
+  <div className="px-5 py-2">
+ 
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         Noteworthy technology acquisitions 2021
       </h5>
-    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      Here are the biggest enterprise technology acquisitions of 2021 so far, in
-      reverse chronological order.
-    </p>
-    <a
-      href="#"
-      className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-    >
-      Read more
-      <svg
-        aria-hidden="true"
-        className="w-4 h-4 ml-2 -mr-1"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fillRule="evenodd"
-          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </a>
+
+
+  
   </div>
 </Link>
 

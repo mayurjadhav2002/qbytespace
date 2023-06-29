@@ -6,6 +6,8 @@ import './App.css';
 import Login from "./Components/Admin/Login";
 import Signup from "./Components/Admin/Signup";
 import Softwares from "./Components/Software Coupons/Softwares"
+import View from "./Components/Software Coupons/View"
+
 import Internships from "./Components/Blogs/internships"
 import Home from "./Home";
 import Footer from "./Components/Footer/Footer";
@@ -19,7 +21,7 @@ function App() {
     <Route path="/signup" element={<Signup />} />
     <Route path="/software-discounts" element={<Softwares />} />
     <Route path="/blogs" element={<Internships />} />
-
+    <Route path="/view/:id/:slug" element={<View />} />
   </Routes>
 <Footer/>
     </div>
