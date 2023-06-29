@@ -11,7 +11,28 @@ const handleOnChange = event => {
 }; 
   const handle_submit= (e)=>{
     e.preventDefault()
-    console.log(inputValues)
+    login(inputValues.email, inputValues.password)
+  }
+
+  const login = async (email,password) => {
+	  // Default options are marked with *
+	  console.log(email)
+	  const response = await fetch('http://localhost:3001/app/login/', {
+		  method: "POST",
+		  headers: {
+			  "Content-type": "application/json;charset=UTF-8",
+		  },
+		  // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+		  body: JSON.stringify({email,password}) // body data type must match "Content-Type" header
+	  });
+	  const  json5 = await response.json()
+	  // console.log(json5)
+	  if(json5.success){
+		  localStorage.setItem("token",json5.jwttoken);
+		  history("/")
+	  }else{
+		  alert("invalid")
+	  }
   }
   return (
     <div>

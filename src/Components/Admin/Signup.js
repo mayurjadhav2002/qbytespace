@@ -9,6 +9,31 @@ function Signup() {
     "phone_no":"",
     "company":""
   })
+
+  const handle_submit= (e)=>{
+    e.preventDefault()
+    signin(signUp.Firstname, signUp.Lastname,signUp.Phonenumber,signUp.password)
+  }
+
+  const signin = async (Firstname, Lastname, Phonenumber,Password) => {
+    // Default options are marked with *
+    const response = await fetch('http://localhost:3001/app/signup', {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json;charset=UTF-8",
+      },
+      // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify({Firstname, Lastname, Phonenumber,Password})
+    });
+    const json = await response.json()
+    if (json.success) {
+      history("/login")
+    } else {
+      alert("invalid")
+    }
+  }
+
+
   return (
     <div>
     
