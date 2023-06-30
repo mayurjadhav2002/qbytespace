@@ -86,7 +86,7 @@ function Navbar() {
               More \/
             </Link>
             <div class="dropdown-content rounded-lg shadow-lg mt-1">
-              <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mt-1'>Udemy Coupons</Link>
+              <Link to="/udemy-coupons-free-courses" className='hover:bg-gray-100 rounded-lg mx-1 mt-1'>Udemy Coupons</Link>
               <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1'>Book Finder</Link>
 
               <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mb-1'>Write an Article</Link>
@@ -105,6 +105,12 @@ function Navbar() {
           >
             Sign Up
           </Link>
+
+
+
+
+
+          
           {/*<div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
         <a
           href="#"
@@ -256,7 +262,7 @@ function Navbar() {
                       <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
                     </svg>
 
-                    <span className="flex-1 ml-3 whitespace-nowrap">Internships + Courses</span>
+                    <span className="flex-1 ml-3 whitespace-nowrap">Internships & Courses</span>
                     <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full
            dark:bg-gray-700 dark:text-gray-300">
                       New
@@ -264,8 +270,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link to="/"
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
 
@@ -278,11 +283,10 @@ function Navbar() {
                     </svg>
                     <span className="flex-1 ml-3 whitespace-nowrap">Career Blog</span>
 
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link to="/"
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
 
@@ -296,7 +300,7 @@ function Navbar() {
                       <path d="M1 2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 9H1V8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6H1V5H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 2H1Zm11 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm2 0a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7ZM3.5 10a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6Zm0 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6ZM4 4h-.5a.5.5 0 0 0 0 1H4v1h-.5a.5.5 0 0 0 0 1H4a1 1 0 0 0 1 1v.5a.5.5 0 0 0 1 0V8h1v.5a.5.5 0 0 0 1 0V8a1 1 0 0 0 1-1h.5a.5.5 0 0 0 0-1H9V5h.5a.5.5 0 0 0 0-1H9a1 1 0 0 0-1-1v-.5a.5.5 0 0 0-1 0V3H6v-.5a.5.5 0 0 0-1 0V3a1 1 0 0 0-1 1Zm7 7.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5Z" />
                     </svg>
                     <span className="flex-1 ml-3 whitespace-nowrap">AI tools</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <p
@@ -376,8 +380,8 @@ function Navbar() {
 
 
                 <li>
-                  <a
-                    href="#"
+                  <Link to="/"
+                    
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <svg
@@ -394,11 +398,11 @@ function Navbar() {
                       />
                     </svg>
                     <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link 
+                    to="/"
                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <svg
@@ -415,7 +419,7 @@ function Navbar() {
                       />
                     </svg>
                     <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

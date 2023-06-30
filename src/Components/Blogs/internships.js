@@ -65,30 +65,13 @@ function internships() {
                 <div><strong>Jese Leos</strong> | <span className='text-xs text-gray-600'>10 days ago</span></div>
               </div>
             </div>
-            <div className="flex items-center space-x-1">
-              <div class="dropdown">
-                <Link
-                  className="rounded dropbtn transition " 
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-                  </svg>
-                </Link>
-                <div className="dropdown-content rounded-lg shadow-lg mt-1">
-                  <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mt-1'>Udemy Coupons</Link>
-                  <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1'>Book Finder</Link>
-
-                  <Link to="/" className='hover:bg-gray-100 rounded-lg mx-1 mb-1'>Write an Article</Link>
-
-                </div>
-              </div>
-            </div>
+           
           </div>
           <div className='grid grid-cols-6 gap-3 '>
             <div className='col-span-5 '>
               <h4 className='headline-text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod quidem molestias commodi, </h4>
-              <div className='h-12 p overflow-clip text-ellipsis'>
-                <p className='text-[14px] leading-6  line-clamp-3 text-gray-700 mt-[-4px] text-ellipsis'>
+              <div className='h-8 p overflow-clip text-ellipsis'>
+                <p className='text-[14px] leading-4  line-clamp-3 text-gray-700 mt-[-4px] text-ellipsis'>
 
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, aliquam. Aliquam dicta voluptates illum voluptas quia reprehenderit doloribus et amet sed corrupti quas rerum minima, voluptatum fugit vero accusantium assumenda?
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis libero aliquam, delectus amet fugiat atque, odit, earum architecto iusto dolore veniam provident sed! Nemo molestias odio magnam nobis? Eos, ullam!</p>

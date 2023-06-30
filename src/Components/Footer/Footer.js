@@ -14,13 +14,13 @@ function Footer() {
       <div className="px-5 py-12 mx-auto  lg:py-16 md:px-12 lg:px-20">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <a
+            <Link to="/"
               href="./index.html"
               className="text-lg font-bold tracking-tighter text-blue-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8"
             >
               <img src={Logo} alt="" />
              
-            </a>
+           </Link>
            
           </div>
           <div className="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
@@ -29,51 +29,51 @@ function Footer() {
                 <h3 className="text-xs font-semibold tracking-wider text-blue-600 uppercase">
                   Quick Links
                 </h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="#"
+                    <Link to="/ai-tools"
+                      
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
                       AI tools
-                    </a>
+                   </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link to="/software-discounts"
+                      
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
                       Software Coupons
-                    </a>
+                   </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link to="/blogs"
+                      
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
-                      Free Courses
+                      Internships & Courses
                       
-                    </a>
+                   </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link to="/udemy-coupons-free-courses"
+                      
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
                       Udemy Coupons
-                    </a>
+                   </Link>
                   </li>
                   <li>
-                  <a
-                    href="#"
+                  <Link to="/blog"
+                    
                     className="text-sm font-normal text-gray-500 hover:text-gray-900"
                   >
                     
                     Blog
-                  </a>
+                 </Link>
                 </li>
                 </ul>
               </div>
@@ -81,15 +81,15 @@ function Footer() {
                 <h3 className="text-xs font-semibold tracking-wider text-blue-600 uppercase">
                   Support
                 </h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul  className="mt-4 space-y-4">
                   <li>
-                    <a
-                      href="#"
+                    <Link to="/"
+                      
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
                       Terms and Conditions
-                    </a>
+                   </Link>
                   </li>
                   <li>
                     <Link to="/"
@@ -116,22 +116,22 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link to="/"
+                      
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
                       Contact 
-                    </a>
+                   </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link to="/"
+                      
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
                       Join us
-                    </a>
+                   </Link>
                   </li>
                 </ul>
               </div>
@@ -262,13 +262,13 @@ function Footer() {
         <div className="mt-8 md:mt-0 md:order-1">
           <span className="mt-2 text-sm font-light text-gray-500">
             Copyright © 2020 - 2021
-            <a
+            <Link to="/"
               href="https://wickedlabs.dev"
               className="mx-2 text-wickedblue hover:text-gray-500"
               rel="noopener noreferrer"
             >
               @QbyteSpace
-            </a>
+           </Link>
             . Since 2023
           </span>
         </div>
