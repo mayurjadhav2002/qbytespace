@@ -4,7 +4,7 @@ import Image2 from '../../Assets/Images/adobe-photoshop.jpg';
 function Hero() {
   return (
 
-    <div>
+    <div className='-z-10'>
     
     <div className="relative overflow-hidden">
   <div className="text-center -z-10 align-middle justify-center items-center mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +97,7 @@ function Hero() {
         {/* End Brands */}
       </div>
       {/* End Col */}
-      <div className="lg:col-span-4 lg:flex hidden p-5 mt-10 md:flex overflow-clip lg:mt-0">
+      <div className="lg:col-span-4 z-0 lg:flex hidden p-5 mt-10 md:flex overflow-clip lg:mt-0">
         <img
           className="w-3/4 right-0 flex rounded-xl object-cover"
           src={Image1}

@@ -11,6 +11,7 @@ import View from "./Components/Software Coupons/View"
 import Internships from "./Components/Blogs/internships"
 import Home from "./Home";
 import Footer from "./Components/Footer/Footer";
+import Disclaimer from "./Components/Company/Disclaimer";
 function App() {
   return (
     <div >
@@ -22,6 +23,8 @@ function App() {
     <Route path="/software-discounts" element={<Softwares />} />
     <Route path="/blogs" element={<Internships />} />
     <Route path="/view/:id/:slug" element={<View />} />
+    
+    <Route path="/disclaimer" element={<Disclaimer />} />
   </Routes>
 <Footer/>
     </div>

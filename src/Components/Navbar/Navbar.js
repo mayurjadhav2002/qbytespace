@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom"
+import Logo from "../../Assets/Images/Logo/logo.png"
 
 function Navbar() {
   return (
-    <div className='shadow-sm top-0 sm:relative md:fixed md:sticky'>
+    <div className='shadow-sm top-0  z-50 sm:relative md:fixed md:sticky'>
 
-      <div className="mx-auto z-50 bg-white flex shadow-sm items-center justify-between p-4">
+      <div className="mx-auto bg-white flex shadow-sm items-center justify-between p-4">
         <div className="flex items-center space-x-2">
           <button type="button"
             className=" flex appearance-none p-1 text-gray-500 md:hidden justify-center items-center gap-2 rounded-md border border-transparent font-semibold "
@@ -48,22 +49,25 @@ function Navbar() {
             </svg>
           </button>
           <Link to="/" >
-            <span className='font-semibold text-justify bold text-2xl'>      QbyteSpace
+          
+            <span className='font-semibold text-justify bold  text-2xl'>
+            <img src={Logo} className='h-10' alt="" />
 
             </span>
           </Link>
         </div>
         <nav className="hidden items-center space-x-2 text-sm font-medium text-gray-800 md:flex">
+        <Link to="/blogs"
+            className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
+          >
+            Internships + Courses
+          </Link>
           <Link to="/software-discounts"
             className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
           >
             Software Coupons
           </Link>
-          <Link to="/blogs"
-            className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-          >
-            Internships + Courses
-          </Link>
+          
           <Link to="/software-discounts"
             className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
           >
