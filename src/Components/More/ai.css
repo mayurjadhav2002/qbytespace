@@ -1,0 +1,14 @@
+.ai-tools-card-inside{
+    background: rgb(240, 235, 245);
+
+background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, rgb(213, 198, 230) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, rgb(215, 196, 226) 100%);
+
+background: -webkit-linear-gradient(90deg, rgb(241, 235, 245) 0%, rgb(196, 188, 219) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ebf4f5", endColorstr="#b5c6e0", GradientType=1 );
+}
+.ai-tools-card{
+    background-color: rgb(249, 240, 255);
+}

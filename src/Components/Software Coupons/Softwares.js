@@ -26,7 +26,7 @@ function Softwares() {
   
   </div>
 
-  <div class="px-5 py-1 flex justify-between bg-slate-50">
+  <div className="px-5 py-1 flex justify-between bg-slate-50">
 
   <div className='flex justify-start'>
   {/*Likes*/}

@@ -66,15 +66,7 @@ function Footer() {
                       Udemy Coupons
                    </Link>
                   </li>
-                  <li>
-                  <Link to="/blog"
-                    
-                    className="text-sm font-normal text-gray-500 hover:text-gray-900"
-                  >
-                    
-                    Blog
-                 </Link>
-                </li>
+                 
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
@@ -83,7 +75,7 @@ function Footer() {
                 </h3>
                 <ul  className="mt-4 space-y-4">
                   <li>
-                    <Link to="/"
+                    <Link to="/terms-and-conditions"
                       
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
@@ -92,7 +84,7 @@ function Footer() {
                    </Link>
                   </li>
                   <li>
-                    <Link to="/"
+                    <Link to="/privacy-policy"
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
@@ -108,7 +100,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/"
+                    <Link to="/about-us"
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
@@ -116,7 +108,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/"
+                    <Link to="/contact"
                       
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
@@ -125,13 +117,12 @@ function Footer() {
                    </Link>
                   </li>
                   <li>
-                    <Link to="/"
+                    <Link to="/open-source-contribution"
                       
                       className="text-sm font-normal text-gray-500 hover:text-gray-900"
                     >
                       
-                      Join us
-                   </Link>
+Join Us                   </Link>
                   </li>
                 </ul>
               </div>

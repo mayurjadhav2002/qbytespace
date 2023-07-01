@@ -1,17 +1,21 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import './internship.css'
+import { Link } from 'react-router-dom'
+import Recommeded from './Recommeded'
 
-function View(props) {
-  
-      const {id, slug} = useParams(); 
-  
+function Blog() {
 
   return (
-
     <div>
-      <section>
-        <div key={id} className=" flex flex-col items-center px-5 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div key={slug} className="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 py-4 lg:w-4/5 w-full justify-center mx-auto">
+        {
+          // Column 1 Blogs
+        }
+        <div className="lg:col-span-3 lg:p-5 p-1  ">
+
+        <section>
+        <div className=" flex flex-col items-center px-5  mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
 
             <div className="w-full mx-auto">
 
@@ -21,6 +25,7 @@ function View(props) {
                   <img
                     className="w-10 h-10 rounded-full"
                     src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    alt=""
                   />
                   <div className="font-medium dark:text-white">
                     <div>Jese Leos</div>
@@ -122,16 +127,53 @@ function View(props) {
               <p>Right. Say that again. No, no, George, look, it's just an act, right? Okay, so 9:00 you're strolling through the parking lot, you see us struggling in the car, you walk up, you open the door and you say, your line, George. Stop it. We're gonna take a little break but we'll be back in a while so, don't nobody go no where.</p>
             </div>
 
-            <hr className='my-10' />
+            <hr className='mt-10 mb-3' />
+<div className="flex items-center justify-between">
+<div className='flex items-center'>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+</svg> Like button
 
+
+</div>
+
+<div className='flex items-center'>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye mr-2" viewBox="0 0 16 16">
+  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+</svg>
+<span className='text-sm text-gray-900'>101 Views</span>
+</div>
+
+</div>
+            
           </div>
 
         </div>
 
       </section>
 
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        {
+          // recommended articles
+        }
+        <div className="col-span-2 border-l-2 align-center justify-center ">
+     <Recommeded/>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default View
+export default Blog
