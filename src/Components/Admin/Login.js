@@ -17,7 +17,7 @@ const handleOnChange = event => {
   const login = async (email,password) => {
 	  // Default options are marked with *
 	  console.log(email)
-	  const response = await fetch('http://localhost:3001/app/login/', {
+	  const response = await fetch('http://localhost:3001/api/login/', {
 		  method: "POST",
 		  headers: {
 			  "Content-type": "application/json;charset=UTF-8",
@@ -30,12 +30,6 @@ const handleOnChange = event => {
 	  if(json5.success){
 		  localStorage.setItem("token",json5.jwttoken);
 // check this
-
-
-
-
-
-
 
 
 

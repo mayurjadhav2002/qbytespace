@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 function AItools() {
   return (
     <div>
-      <div className="grid grid-cols-6 w-4/5 mx-auto gap-4">
-        <div className="col-span-1 sticky top-10 text-left bg-slate-50 rounded-lg my-10 px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-6 w-4/5 mx-auto gap-4">
+        <div className=" none lg:block hidden col-span-1 sticky top-10 text-left bg-slate-50 rounded-lg my-10 px-4">
           <h2 className="text-xl font-medium mt-24 dark:text-white">Tools That Makes the Life Easy</h2>
 
-          <ul className="sticky top-8" data-hs-scrollspy="#scrollspy-2" data-hs-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-2">
+          <ul className="sticky top-8 ">
 
             <li>
               <Link className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm cursor-pointer text-slate-700 rounded-md hover:bg-purple-50 dark:bg-gray-900 dark:text-white">
@@ -75,11 +75,11 @@ function AItools() {
           </ul>
         </div>
 
-        <div className="col-span-5 my-10">
+        <div className="col-span-1 lg:col-span-5 my-10">
           <div id="scrollspy-2" className="space-y-4">
             <div id="item-1">
               <h2 className="font-semibold text-violet-700">Audio</h2>
-              <div className='grid grid-cols-4'>
+              <div className='grid grid-cols-1 lg:grid-cols-4'>
                 <div className="col-2 w-full h-72 max-h-72 overflow-hidden ai-tools-card rounded-xl">
                   <Link to="/">
                     <div className='max-h-44 h-44 overflow-hidden ai-tools-card-inside rounded-xl m-2'>

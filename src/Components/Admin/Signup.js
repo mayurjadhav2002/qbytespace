@@ -17,7 +17,7 @@ function Signup() {
 
   const signin = async (Firstname, Lastname, Phonenumber,Password) => {
     // Default options are marked with *
-    const response = await fetch('http://localhost:3001/app/signup', {
+    const response = await fetch('http://localhost:3001/api/register', {
       method: "POST",
       headers: {
         "Content-type": "application/json;charset=UTF-8",

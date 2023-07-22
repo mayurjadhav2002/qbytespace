@@ -5,17 +5,36 @@ function Udemy() {
     const url = "https://flask-udemy-coupon-code.mayurjadhav.repl.co/";
     const [data, setData] = useState([]);
 
-  
+  const[loading, setLoading] = useState(true);
     const fetchInfo = () => {
-      return fetch(url)
+      setLoading(true);
+      try{
+        return fetch(url)
         .then((res) => res.json())
         .then((d) => setData(d))
+      }catch(e){
+console.log(e);
+      }
+      setLoading(false);
+
     }
   
   
     useEffect(() => {
-      fetchInfo();
+      try{
+        
+
+        fetchInfo();
+
+      }catch(e){
+console.log(e)
+      }
     }, []);
+    const Loading = ()  =>{
+      return (
+        <div><h1 className='text-center py-44 animate-bounce'>Loading...</h1></div>
+      )
+    }
   return (
     <div >
       <div className='w-4/5 mx-auto '>
@@ -27,7 +46,7 @@ Click on the Courses below, the coupon codes will be applied automatically (they
 <hr className='mt-10'/>
 
 
-{data.length > 0 && (
+{!loading? <Loading/> : data.length > 0 && (
   
 
 <div className="grid lg:grid-cols-4 py-4 grid-cols-1  gap-5">

@@ -1,23 +1,65 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import Ads from './Ads'
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios';
+import './softwares.css'
+ function View() {
+  
+  const {id, slug} = useParams();
+  const [loading, setLoading] = useState(false);
 
-function View() {
+  const [data, setData] = useState({});
+  const url = process.env.REACT_APP_BASE_BACKEND_URL+`/software/coupon/?id=${id}`;
+  useEffect(() => {
 
-  return (
+    const loadPost = async () => {
+            setLoading(true);
+
+      
+        const response = await axios.get(url);
+
+        // After fetching data stored it in posts state.
+        setData(response.data.coupon);
+        // Closed the loading page
+        setLoading(false);
+    }
+
+    // Call the function
+    loadPost();
+}, []);
+      return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 py-4 lg:w-4/5 w-full justify-center mx-auto">
         {
           // Column 1 Views
         }
+        
         <div className="lg:col-span-3 lg:p-5 p-1  ">
         <section>
+        {loading ? ( <h1>Loading</h1> ):
+          
+          
         <div className=" flex flex-col items-center px-5  mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col w-full max-w-3xl mx-auto prose text-left prose-blue">
 
             <div className="w-full mx-auto">
 
-              <h1 className='lg:text-5xl text-4xl font-bold'>A small headline to switch your visitors into users. </h1>
+              <h1 className='lg:text-5xl text-4xl font-bold'>{data.title}</h1>
+              <div className="flex items-center justify-between">
+<div className=" items-center max-w-7xl md:flex md:items-center md:justify-between ">
+  <p>{data.posted_on}</p>
+ 
+</div>
+
+<div className='flex items-center'>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye mr-2" viewBox="0 0 16 16">
+  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+</svg>
+<span className='text-sm text-gray-900'>{data.views} Views</span>
+</div>
+
+</div>
               <div className='flex justify-between items-center'>
                 
 
@@ -32,16 +74,21 @@ function View() {
 
               </div>
               <figure>
-                <img src="https://cdn.dribbble.com/userupload/5209506/file/original-52dfb303e9de5fe6a958b4ea6b35399f.jpg?compress=1&resize=450x338&vertical=center"
-                  className='w-full max-h-max py-1'
+                <img src={data.image} className='h-auto min-h-44 max-h-72 mx-auto py-1'
 
-                  alt="This is Main Image" srcset="" />  <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                  alt={data.title} loading='lazy' srcset="" />  <figcaption>{data.title}</figcaption>
               </figure>
 
 
               <h2>A small headline to switch your visitors into users.</h2>
-              <p>Right. Say that again. No, no, George, look, it's just an act, right? Okay, so 9:00 you're strolling through the parking lot, you see us struggling in the car, you walk up, you open the door and you say, your line, George. Stop it. We're gonna take a little break but we'll be back in a while so, don't nobody go no where.</p>
+              <p>
+{data.description}              </p>
+<h2>How to Avail? </h2>
+
+<div className='p-4 datalist bg-blue-50 rounded font-semibold' dangerouslySetInnerHTML={{__html: data.lists}}/>
             </div>
+            <h2>Steps to Download</h2>
+
 
             <hr className='mt-10 mb-3' />
 <div className="flex items-center justify-between">
@@ -89,11 +136,8 @@ function View() {
 </div>
 
 <div className='flex items-center'>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye mr-2" viewBox="0 0 16 16">
-  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-</svg>
-<span className='text-sm text-gray-900'>101 Views</span>
+
+<span className='text-sm text-gray-900'>{data.category}</span>
 </div>
 
 </div>
@@ -101,6 +145,8 @@ function View() {
           </div>
 
         </div>
+      }
+
 
       </section>
 

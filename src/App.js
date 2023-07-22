@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Softwares from "./Components/Software Coupons/Softwares"
 import View from "./Components/Software Coupons/View"
-import Internships from "./Components/Blogs/internships"
+import Internships from "./Components/Blogs/Internships"
 import Home from "./Home";
 import Footer from "./Components/Footer/Footer";
 import Disclaimer from "./Components/Company/Disclaimer";
@@ -21,7 +21,18 @@ import Policy from "./Components/Company/Policy";
 import Write from "./Components/Company/Write";
 import Contribution from "./Components/Company/Contribution";
 import Blog from "./Components/Blogs/Blog";
+import Login from "./Components/Admin/Login";
+import Signup from "./Components/Admin/Signup";
+import Axios from './Hooks/Axios';
+import { createContext } from "react";
+export const dataContext = createContext();
+
 function App() {
+  const { data, loading, error, getData } = Axios(`?page=${1}`);
+  const value = {
+    data, loading, error, getData
+  }
+
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   		
   	useEffect(() => {
@@ -42,18 +53,23 @@ function App() {
       		window.removeEventListener("offline", offlineHandler);
     	};
   	}, []);
+    console.log(data)
   return (
     <div >
+    <dataContext.Provider value={value}>
+
     <Navbar/>
     {isOnline ? (
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Errors />} />
+
       <Route path="/software-discounts" element={<Softwares />} />
+
       <Route path="/blogs" element={<Internships />} />
       <Route path="/blogs/:id/:slug" element={<Blog />} />
 
-      <Route path="/view/:id/:slug" element={<View />} />
+      <Route path="software-discounts/view/:id/:slug" element={<View />} />
       <Route path="/udemy-coupons-free-courses" element={<Udemy />} />
       <Route path="/ai-tools" element={<AItools />} />
       <Route path="/disclaimer" element={<Disclaimer />} />
@@ -63,6 +79,8 @@ function App() {
       <Route path="/terms-and-conditions" element={<Terms />} />
       <Route path="/privacy-policy" element={<Policy />} />
       <Route path="/apply-for-writer" element={<Write />} />
+      <Route path="/User/Login" element={<Login />} />
+      <Route path="/User/register" element={<Signup />} />
 
       <Route path="/open-source-contribution" element={<Contribution />} />
 
@@ -74,6 +92,8 @@ function App() {
   
     
 <Footer/>
+</dataContext.Provider>
+
     </div>
   );
 }
