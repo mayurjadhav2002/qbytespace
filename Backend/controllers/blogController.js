@@ -34,6 +34,7 @@ const get_all_blogs = async (req, res) => {
         } else {
             res.status(500).send({ success: false, msg: "No blog found" });
 
+            
         }
     } catch (error) {
         res.status(500).send({ success: false, msg: "Some errored occured please try again" });

@@ -20,7 +20,8 @@ const userSchema = mongoose.Schema({
    
     image: {
         type: String,
-        required: false
+        required: false,
+        default: "avatar.png"
     },
     role: {
         type: String,

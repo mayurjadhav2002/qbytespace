@@ -1,3 +1,5 @@
+
+try {
 const express = require('express');
 const app = express();
 var cors = require('cors');
@@ -8,7 +10,6 @@ app.use(cors());
 // Database connection
 const moogose = require('mongoose');
 
-try {
 moogose.connect('mongodb+srv://mayur:mayur--31@cluster0.v9x6kcw.mongodb.net/qbytespace')
 app.use('/static', express.static(__dirname + '/public'));
 
@@ -24,7 +25,12 @@ const blog_routes = require('./routes/blogRoute');
 app.use('/api/blog', blog_routes);
 
 
+const admin = require('./routes/adminRoute');
+app.use('/api/admin', admin);
+
+
 app.listen(port, ()=> console.log(`Connected to port: ${port}`));
-} catch (error) {
-    console.log("Some error Occured! must be internet error")
+} 
+catch (error) {
+    console.log({error:error.message, message:"Some error Occured! must be internet error"})
 }

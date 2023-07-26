@@ -71,7 +71,7 @@ const register_user = async (req, res) => {
                 name: req.body.name,
                 email: req.body.email,
                 password: pass,
-                image: req.file.filename
+                image: req.file.filename 
             });
 
             const data = await user.save();
@@ -121,7 +121,7 @@ const user_login = async (req, res) => {
             }
 
         } catch (error) {
-            res.status(400).send(error.message);
+            res.status(400).send({error: error.message, msg:"Faild to load, some errored occured"});
         }
     } else {
         res.status(400).send({ msg: "User Not exists" })
