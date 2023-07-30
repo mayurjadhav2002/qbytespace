@@ -11,7 +11,7 @@ skip = 0;
             skip = (page - 1) * limit;
         }
       
-    productdata = await Software.find().sort({"_id": 'ascending'}).skip(skip).limit(limit)
+    productdata = await Software.find().sort({'created_on':'ascending'}).skip(skip).limit(limit)
         
         res.status(200).send({ success: true, data: productdata });
 
@@ -25,7 +25,7 @@ skip = 0;
 const coupon_by_id = async (req, res) => {
     try {
         const id = req.query.id || req.body.id;
-        const coupon = await Software.findOne({ _id: id });
+        const coupon = await Software.findByIdAndUpdate({ _id: id }, { $inc: { views: 1 } })
 
         if (coupon) {
             res.status(200).send({ success: true, coupon: coupon });

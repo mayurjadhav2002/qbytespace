@@ -25,7 +25,7 @@ try {
         from: config.email_user,
         to: email,
         subject: "Token for Password Reset Request | QbyteSpace",
-        html:'<p>Copy this token :' + token + 'and enter in otp section <a href="http://localhost:3000/api/reset-password?token='+token+'">Reset password</a></p>',
+        html:`<p>Copy this token :' + token + 'and enter in otp section <a href="http://localhost:3000/api/reset-password?email=${email}&token=${token}">Reset password</a></p>`,
     }
     emailData.sendMail(Mailoptions, function(error, success){
         if(error){
@@ -204,7 +204,8 @@ const password_reset = async(req, res)=>{
 const reset_password_validate = async(req, res)=>{
     try {
         const token = req.query.token;
-        const tokenData = await User.findOne({password_token: token});
+        const email = req.query.email;
+        const tokenData = await User.findOne({ email: email, password_token: token});
         if(tokenData){
             const password = await securePassword(req.body.password);
             const User_password = await User.findByIdAndUpdate({_id:tokenData._id}, {$set:{password: password, password_token: ''}}, {new:true});

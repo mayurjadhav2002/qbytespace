@@ -48,6 +48,10 @@ const blogModel = mongoose.Schema({
         type: String,
         default: 0
     },
+    recommended:{
+        type: Number,
+        default: 0
+    },
     report:{
         type: Boolean,
         default: 0

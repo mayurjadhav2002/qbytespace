@@ -1,5 +1,3 @@
-
-try {
 const express = require('express');
 const app = express();
 var cors = require('cors');
@@ -10,7 +8,11 @@ app.use(cors());
 // Database connection
 const moogose = require('mongoose');
 
-moogose.connect('mongodb+srv://mayur:mayur--31@cluster0.v9x6kcw.mongodb.net/qbytespace')
+try {
+moogose.connect(`mongodb+srv://mayur:mayur--31@cluster0.v9x6kcw.mongodb.net/qbytespace`)}
+catch (error) {
+    console.log({error:error.message, message:"Some error Occured! must be internet error"})
+}
 app.use('/static', express.static(__dirname + '/public'));
 
 // User Routings
@@ -30,7 +32,3 @@ app.use('/api/admin', admin);
 
 
 app.listen(port, ()=> console.log(`Connected to port: ${port}`));
-} 
-catch (error) {
-    console.log({error:error.message, message:"Some error Occured! must be internet error"})
-}

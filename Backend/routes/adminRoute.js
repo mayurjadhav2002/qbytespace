@@ -34,8 +34,8 @@ admin.post('/image', upload.single('image'), async(req, res) => {
     try {
 
         const image = new imageModel({
-            user: req.body.name,
-            created_by: req.body.id,
+            user: req.body.name || 'undefined',
+            created_by: req.body.id || 'undefined',
             image: name
         })
         const data = image.save();

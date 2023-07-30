@@ -1,22 +1,21 @@
-const jwt = require('jsonwebtoken');
-const config = require('../config/config');
-const verifyToken = async(req, res, next) => {
-    const token = req.body.token || req.query.token || req.headers['authorization'];
-    if (!token) {
-        res.status(200).send({ success: false, msg: "token not found" })
-        return next();
-    }
-    try {
-        const decode = jwt.verify(token, config.secret_jwt);
-        req.user = decode;
-        return next();
+const jwt = require("jsonwebtoken");
 
-    }
+const config = require('../config/config')
 
-    catch (error) {
-        res.status(400).send({msg: "Invalid token"})
-    }   
+const verifyToken = (req, res, next) => {
+  const token =
+    req.body.token || req.query.token || req.headers["Authorization"];
 
-}
+  if (!token) {
+    return res.status(403).send("A token is required for authentication");
+  }
+  try {
+    const decoded = jwt.verify(token, config.secret_jwt);
+    req.user = decoded;
+  } catch (err) {
+    return res.status(401).send("Invalid Token");
+  }
+  return next();
+};
 
 module.exports = verifyToken;

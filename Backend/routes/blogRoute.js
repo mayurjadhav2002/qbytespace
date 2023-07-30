@@ -66,10 +66,12 @@ blog_route.get('/blog_by_id', blog_controller.blog_by_id);
 
 blog_route.put('/delete', blog_controller.delete_blog)
 blog_route.put('/update', blog_controller.update)
+blog_route.get('/user-blogs', blog_controller.user_blog)
+blog_route.get('/total_blogs', blog_controller.get_count)
 
 blog_route.put('/data', blog_controller.data)
 
-
+blog_route.get('/recommended', blog_controller.get_Recommended)
 blog_route.post('/pagination-blogs', blog_controller.pagination)
 
 

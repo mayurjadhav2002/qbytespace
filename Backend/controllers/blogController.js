@@ -1,9 +1,29 @@
 const express = require('express');
 const Blog = require('../models/blogModel');
 const Search = require('../models/Search');
-const create_blog = async (req, res) => {
+
+
+const user_blog = async(req, res) =>{
+    try{
+        const id = req.body.id || req.query.id;
+        const blogs = await Blog.find({ written_by: id });
+    
+       
+        if (blogs) {
+            res.send({total: blogs.length,blogs:blogs});
+
+        } else {
+            res.status(500).send({ success: false, msg: "No blog found" });
+
+        }
+    
+    }  catch (error) {
+        res.status(500).send({ success: false, msg: "Some errored occured please try again", data: error });
+    }
+}
+const create_blog = async(req, res) => {
     try {
-        const thumbnail = req.file.filename;
+        const thumbnail = req.file.filename || 'thumbnail.png';
         const blog = new Blog({
             title: req.body.title,
             description: req.body.description,
@@ -23,13 +43,36 @@ const create_blog = async (req, res) => {
         res.status(500).send({ success: false, msg: "Some errored occured please try again" });
     }
 }
+const get_count = async(req,res) =>{
+try {
+    const total = await Blog.find().count()
+    if(total){
+        res.send({total})
+    }else{
+        res.status(400).send({"msg":"Some error Occured"})
+    }
 
+} catch (error) {
+    res.status(500).send({ success: false, msg: "Some errored occured please try again" });
+
+}
+}
 const get_all_blogs = async (req, res) => {
-    
     try {
-        const blogs = await Blog.find({}).sort({ "created_on": 'ascending' });
+        var page = req.body.page || req.query.page;
+        var productdata;
+        var skip;
+        const limit = 10;
+        if(page <=1){
+            skip = 0;
+                    }else{
+                        skip = (page - 1) * limit;
+                    }
+
+        const blogs = await Blog.find({}).sort({ "created_on": 'descending' }).skip(skip).limit(limit);
         if (blogs) {
             res.send(blogs);
+
 
         } else {
             res.status(500).send({ success: false, msg: "No blog found" });
@@ -42,9 +85,10 @@ const get_all_blogs = async (req, res) => {
 };
 
 
+
 const get_blogs = async (req, res) => {
     try {
-        const blogs = await Blog.find({ blog: req.body.blog_type });
+        const blogs = await Blog.find({ blog: req.body.blog_type }).sort({ "created_on": 'descending' });
         if (blogs) {
             res.send(blogs);
 
@@ -60,9 +104,10 @@ const get_blogs = async (req, res) => {
 
 
 
+
 const search_blogs = async (req, res) => {
     try {
-        const sort_data = req.body.sort_data;
+        const sort_data = req.body.sort_data || 'descending';
         var search = req.body.search;
         const blogs = await Blog.find({
             $or:
@@ -92,16 +137,28 @@ const search_blogs = async (req, res) => {
     }
 }
 
+const get_Recommended = async(req,res) =>{
+    try {
+        const blogs = await Blog.find({recommended: 1})
+        if(blogs){
+            res.send(blogs)
+
+        }else{
+            res.status(200).send({ success: true, msg: "No Blog Found" })
+
+        }
+        
+    } catch (error) {
+        res.status(500).send({ success: false, msg: "Some errored occured please try again" });
+
+    }
+}
+
+
 const Views = async (req, res) => {
     try {
         const blog_id = req.body.id;
-        const update = await Blog.findByIdAndUpdate({ _id: blog_id }, { $inc: { views: 1 } }, function (err, response) {
-            if (err) {
-                callback(err);
-            } else {
-                callback(response);
-            }
-        });
+        const update = await Blog.findByIdAndUpdate({ _id: blog_id }, { $inc: { views: 1 } });
 
         if (update) {
             res.status(200).send({ success: true, msg: "Views Updated" });
@@ -121,20 +178,13 @@ const Views = async (req, res) => {
 
 const likes = async (req, res) => {
     try {
-        const blog_id = req.body.id;
-        const update = await Blog.findByIdAndUpdate({ _id: blog_id }, { $inc: { likes: 1 } }, function (err, response) {
-            if (err) {
-                callback(err);
-            } else {
-                callback(response);
-            }
-        })
-
+        const id = req.body.id;
+        const update = await Blog.findByIdAndUpdate({ _id: id }, { $inc: { likes: 1 } })
         if (update) {
             res.status(200).send({ success: true, msg: "Likes Updated" });
 
         } else {
-            res.status(200).send({ success: false, msg: "Error Updating Likes" })
+            res.status(501).send({ success: false, msg: "Error Updating Likes" })
 
         }
 
@@ -148,7 +198,7 @@ const likes = async (req, res) => {
 const blog_by_id = async (req, res) => {
     try {
         const blog_id = req.query.id;
-        const blog = await Blog.findOne({ _id: blog_id });
+        const blog = await Blog.findByIdAndUpdate({ _id: blog_id }, { $inc: { views: 1 }}) 
 
         if (blog) {
             res.status(200).send({ success: true, blog: blog });
@@ -157,7 +207,7 @@ const blog_by_id = async (req, res) => {
             res.status(200).send({ success: false, msg: "Error" })
 
         }
-
+    
 
     } catch (error) {
         res.status(500).send({ success: false, msg: "Some errored occured please try again", error: error.message });
@@ -266,5 +316,5 @@ skip = 0;
 
 
 module.exports = { create_blog, get_blogs, get_all_blogs, search_blogs, likes, Views, blog_by_id, delete_blog, update, data,
-    pagination
+    pagination, user_blog, get_count, get_Recommended
 }
