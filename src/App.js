@@ -23,15 +23,9 @@ import Contribution from "./Components/Company/Contribution";
 import Blog from "./Components/Blogs/Blog";
 import Login from "./Components/Admin/Login";
 import Signup from "./Components/Admin/Signup";
-import Axios from './Hooks/Axios';
-import { createContext } from "react";
-export const dataContext = createContext();
 
 function App() {
-  const { data, loading, error, getData } = Axios(`?page=${1}`);
-  const value = {
-    data, loading, error, getData
-  }
+
 
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   		
@@ -53,10 +47,9 @@ function App() {
       		window.removeEventListener("offline", offlineHandler);
     	};
   	}, []);
-    console.log(data)
   return (
     <div >
-    <dataContext.Provider value={value}>
+   
 
     <Navbar/>
     {isOnline ? (
@@ -92,7 +85,6 @@ function App() {
   
     
 <Footer/>
-</dataContext.Provider>
 
     </div>
   );

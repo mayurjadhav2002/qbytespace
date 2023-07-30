@@ -1,32 +1,29 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useContext } from 'react'
-import { dataContext } from '../../App';
+
 import Skeleton from './Skeleton/Skeleton';
+import Axios from '../../Hooks/Axios';
+
 
 import { Link } from 'react-router-dom';
 import "./softwares.css";
 import { Pagination } from 'flowbite-react';
-function Softwares() {
-  const {data, loading, getData} = useContext(dataContext);
-  const [currentPage, setCurrentPage] = useState(1);
-  const onPageChange = (page) => {
-    setCurrentPage(page);
-  
-      getData(`/?page=${currentPage}`)
 
-  }
+function Softwares() {
+
+  const { data, loading, getData} = Axios(`?page=${1}`);
+
+  const [currentPage, setCurrentPage] = useState(1);
 
   return (
   
 
 
 
-
-    <div>
+    <div className='bg-slate-50'>
     <div className="grid grid-cols-1 lg:grid-cols-6 w-11/12 mx-auto gap-4">
-      <div className=" none lg:block hidden col-span-1 sticky top-10 text-left bg-slate-50 rounded-lg my-10 px-4">
+      <div className=" bg-white none lg:block hidden col-span-1 sticky top-10 text-left  rounded-lg my-10 px-4">
         <h2 className="text-xl font-medium mt-24 dark:text-white">Tools That Makes the Life Easy</h2>
 
         <ul className=" ">
@@ -96,20 +93,20 @@ function Softwares() {
         </ul>
       </div>
 
-      <div className="col-span-1 lg:col-span-5 my-10">
+      <div className="col-span-1 lg:col-span-5 my-10 overflow-hidden">
       <div>
     
    
       <div className="w-full sm:mr-80 ">
           <div className="grid gap-4
-           grid-cols-1  mb-4 lg:grid-cols-4">
+           grid-cols-1 md:grid-cols-2 mx-auto mb-4 lg:grid-cols-4">
      
           {loading ? <Skeleton item={20}/> : data.map((data, key) =>
   
   <Link key={key} to={'view/' + data._id + '/' + data.title.split(" ").join("-")} 
-  className="max-w-sm mt-5 card-software  border border-gray-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  className="max-w-sm mt-5 bg-white card-software  border border-gray-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     
-          <img className="p-10 object-fill rounded-2xl  text-center mx-auto h-72" src={data.image} loading='lazy' alt="" />
+          <img className="p-10 object-fill rounded-2xl  text-center mx-auto h-72" src={data.image} alt="" />
         
           
          
@@ -160,10 +157,10 @@ function Softwares() {
       <Pagination className='w-full text-center mx-auto p-4'
       currentPage={currentPage}
       
-      onPageChange={page=>{setCurrentPage(page)}}
+      onPageChange={page=>{setCurrentPage(page); getData(`?page=${currentPage}`); console.log(currentPage)}}
       showIcons
       
-      totalPages={100}
+      totalPages={12}
     />
       </div>
       </div>

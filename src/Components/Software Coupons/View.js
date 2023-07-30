@@ -80,7 +80,7 @@ import './softwares.css'
               </figure>
 
 
-              <h2>A small headline to switch your visitors into users.</h2>
+              <h2>About Software</h2>
               <p>
 {data.description}              </p>
 <h2>How to Avail? </h2>

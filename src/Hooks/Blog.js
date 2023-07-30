@@ -4,6 +4,7 @@ const BlogAxios = (param) => {
     const [blog , setBlog] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
+    const [tags , setTags] = useState([]);
 
 console.log("Data", blog)
 
@@ -12,8 +13,8 @@ console.log("Data", blog)
         try{
 setLoading(true);
 const res = await axios(link);
-console.log('res', res)
 setBlog(res.data.blog);
+setTags(res.data.blog.tags[0].split(","))
 
         }catch(error){
             setError(error);
@@ -26,7 +27,7 @@ setBlog(res.data.blog);
     }, [param])
   return {
 
-    blog, loading, error, getData: link=> getData(link)
+    blog, loading, error, tags, getData: link=> getData(link)
   }
   
 }

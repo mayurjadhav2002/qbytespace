@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 const Axios = (param) => {
     const [data , setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
 
-console.log("Data", data)
-    axios.defaults.baseURL= 'http://localhost:3000/software/';
+    axios.defaults.baseURL= `${process.env.REACT_APP_BASE_BACKEND_URL}/software/`;
     const getData = async(link) =>{
         try{
 setLoading(true);
