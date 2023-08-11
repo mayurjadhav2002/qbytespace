@@ -11,15 +11,16 @@ import { Pagination } from 'flowbite-react';
 import axios from 'axios';
 
 function Internships() {
+  console.log(process.env.REACT_APP_BASE_BACKEND_URL)
   const [currentPage, setCurrentPage] = useState(1);
   const [total, setTotal] = useState(30)
   const {
     data,
-    loading, getData
+    loading, error, getData
   } = useFetchData(`?page=${1}`);
   const Total = async () => {
     try {
-      const res = await axios('http://localhost:3000/api/blog/total_blogs');
+      const res = await axios(`${process.env.REACT_APP_BASE_BACKEND_URL}/api/blog/total_blogs`);
       setTotal(Math.ceil(res.data.total / 10));
     } catch (error) {
     }
@@ -29,12 +30,11 @@ function Internships() {
   }, [])
   return (
     <div>
-
       <div className="lg:grid lg:grid-cols-5 gap-3 py-4 lg:w-4/5 w-full mx-auto">
         {
           // Column 1 Blogs
         }
-
+  
 
         {loading && <div className='lg:col-span-3'>
           <Skeleton />
@@ -112,7 +112,7 @@ function Internships() {
                    overflow-hidden xl:h-44 lg:rounded-lg xl:rounded-lg xl:col-span-2 xl:justify-end md:w-3/5 
                   md:rounded-lg mx-auto lg:mt-0 lg:items-center col-span-6 w-full px-1' >
                       <img
-                        src={'http://192.168.0.108:3000/static/Blogs/thumbnail/' + data.thumbnail}
+                        src={`${process.env.REACT_APP_BASE_BACKEND_URL}/static/Blogs/thumbnail/` + data.thumbnail}
                         loading='lazy'
                         alt='Image'
                         className=" lg:h-44 object-cover" />

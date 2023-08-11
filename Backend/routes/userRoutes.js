@@ -34,7 +34,6 @@ user_route.post('/password-update', auth, user_controller.password_update); //Re
 user_route.post('/password-reset', user_controller.password_reset); //Requires user email
 user_route.get('/reset-password', user_controller.reset_password_validate);  // requires new password
 user_route.post('/profile-update', auth, user_controller.profile_update); //Requires user_id, password and token in header
-
-
+user_route.get('/user', user_controller.user);
 
 module.exports = user_route;

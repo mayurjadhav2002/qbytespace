@@ -75,7 +75,7 @@ const register_user = async (req, res) => {
             });
 
             const data = await user.save();
-            if (data) { res.status(200).send({ msg: "data uploaded" }) }
+            if (data) { res.status(200).send({ msg: "Registration Successful" }) }
             else {
                 res.status(400).send({ msg: "error uploading the data" });
             }
@@ -226,6 +226,23 @@ const reset_password_validate = async(req, res)=>{
     }
 }
 
+const user = async(req, res)=>{
+    try {
+        const user_id = req.query.user_id;
+        const user_Data = await User.findOne({_id: user_id})
+        if(user_Data) {
+            res.status(200).send({success:true, msg: "User password reset successful", data:user_Data});
+        }else{
+            res.status(500).send({success:false, msg: error.message});
+        }
+        
+    } catch (error) {
+        res.status(400).send({success:false, msg:error.message})
+
+    }
+
+}
+
 
 module.exports = {
     register_user,
@@ -233,5 +250,6 @@ module.exports = {
     profile_update,
     password_update,
     password_reset,
-    reset_password_validate
+    reset_password_validate,
+    user
 }

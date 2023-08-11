@@ -4,13 +4,16 @@ const Axios = (param) => {
     const [data , setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState();
-
+    const [total, setTotal] = useState();
     axios.defaults.baseURL= `${process.env.REACT_APP_BASE_BACKEND_URL}/software/`;
+
     const getData = async(link) =>{
         try{
 setLoading(true);
 const res = await axios(link);
 setData(res.data.data);
+const total = await axios.get(`${process.env.REACT_APP_BASE_BACKEND_URL}/software/total/${param}`);
+await setTotal(total.data.total);
 
         }catch(error){
             setError(error);
@@ -23,7 +26,7 @@ setData(res.data.data);
     }, [param])
   return {
 
-    data, loading, error, getData: link=> getData(link)
+    data, loading, error, total, getData: link=> getData(link)
   }
   
 }

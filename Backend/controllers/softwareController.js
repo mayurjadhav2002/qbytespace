@@ -2,6 +2,7 @@ const Software = require('../models/SoftwareCoupons');
 const pagination = async(req, res) =>{
     try {
         var page = req.body.page || req.query.page;
+        var cat = req.query.cat || 'all';
         var productdata;
         var skip;
         const limit = 20;
@@ -10,8 +11,13 @@ skip = 0;
         }else{
             skip = (page - 1) * limit;
         }
+        if (cat === 'all' ){
+            productdata = await Software.find().sort({'created_on':'ascending'}).skip(skip).limit(limit)
+        }else{
+            productdata = await Software.find({'category': cat}).sort({'created_on':'ascending'}).skip(skip).limit(limit)
+
+        }
       
-    productdata = await Software.find().sort({'created_on':'ascending'}).skip(skip).limit(limit)
         
         res.status(200).send({ success: true, data: productdata });
 
@@ -41,4 +47,28 @@ const coupon_by_id = async (req, res) => {
 
     }
 }
-module.exports = {pagination, coupon_by_id}
+
+const get_total = async(req,res) =>{
+    try {
+        const cat = req.query.cat || 'all';
+        var total;
+        if(cat === 'all'){
+            total = await Software.find().count()
+
+        }else{
+            total = await Software.find({'category': cat}).count()
+
+        }
+        if(total){
+            res.send({total})
+        }else{
+            res.status(400).send({"msg":"Some error Occured"})
+        }
+    
+    } catch (error) {
+        res.status(500).send({ success: false, msg: "Some errored occured please try again" });
+    
+    }
+    }
+
+module.exports = {pagination, coupon_by_id, get_total}

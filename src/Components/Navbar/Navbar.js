@@ -2,7 +2,7 @@ import React from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom"
 import Logo from "../../Assets/Images/Logo/logo.png"
-
+import {FcDocument} from 'react-icons/fc'
 function Navbar() {
   return (
     <div className='shadow-sm top-0  z-50 sm:relative md:fixed md:sticky'>
@@ -73,11 +73,11 @@ function Navbar() {
           >
             Udemy
           </Link>
-          <Link to="/ai-tools"
-            className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-          >
-            AI tools
-          </Link>
+          <Link to="/apply-for-writer"
+          className="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
+        >
+        Be Contributer
+        </Link>
 
           <div className="dropdown">
             <Link
@@ -113,18 +113,31 @@ function Navbar() {
                     </div>
                   </Link>
                 </li>
-
+<hr></hr>
                 <li>
                   <Link to="/apply-for-writer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                     <div className="inline-flex items-center">
 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pen-fill mr-2 text-green-400" viewBox="0 0 16 16">
-                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
-                      </svg>
-                      Write a Article
+                      Privacy Policy
                     </div>
                   </Link>
                 </li>
+                <li>
+                <Link to="/apply-for-writer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                  <div className="inline-flex items-center">
+
+                    Disclaimer
+                  </div>
+                </Link>
+              </li>
+              <li>
+              <Link to="/apply-for-writer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                <div className="inline-flex items-center">
+
+                  Terms and Condition
+                </div>
+              </Link>
+            </li>
 
 
               </ul>

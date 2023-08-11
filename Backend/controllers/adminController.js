@@ -1,4 +1,5 @@
 const Image = require('../models/imageModel');
+
 const imageFunction = async (req, res) => {
     try {
              const image = req.file.filename;
@@ -19,4 +20,6 @@ const imageFunction = async (req, res) => {
         res.status(400).send(error.message)
     }
 }
+
+
 module.exports = {imageFunction}

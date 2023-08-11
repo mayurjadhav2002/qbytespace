@@ -60,7 +60,6 @@ try {
 const get_all_blogs = async (req, res) => {
     try {
         var page = req.body.page || req.query.page;
-        var productdata;
         var skip;
         const limit = 10;
         if(page <=1){
@@ -139,7 +138,8 @@ const search_blogs = async (req, res) => {
 
 const get_Recommended = async(req,res) =>{
     try {
-        const blogs = await Blog.find({recommended: 1})
+        var limit = 5;
+        const blogs = await Blog.find({recommended: 1}).sort({'created_on': 'ascending'}).limit(limit)
         if(blogs){
             res.send(blogs)
 

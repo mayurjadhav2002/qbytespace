@@ -26,8 +26,15 @@ const blogModel = mongoose.Schema({
         required:true,
         ref:"user_id"
         
-    }
-    ,
+    },
+    user_image:{
+type:String,
+required:true
+    },
+    user_bio:{
+        type:String,
+        required:true
+            },
     tags:{
         type: Array,
         required:true
